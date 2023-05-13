@@ -11,4 +11,4 @@ RUN pip install -r requirements/development/requirements.txt
 # Copy the src directory to the working directory
 COPY ./ ./
 
-CMD ["python", "-u", "/src/handler.py"]
+CMD ["python", "-u", "src/handler.py"]
