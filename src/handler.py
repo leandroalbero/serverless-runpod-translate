@@ -1,21 +1,24 @@
-#!/usr/bin/env python
-""" Contains the handler function that will be called by the serverless. """
+import os
+import time
 from typing import Any
 
 import runpod  # type: ignore
 
-# Load models into VRAM here so they can be warm between requests
+sleep_time = int(os.environ.get("SLEEP_TIME", 3))
+
+
+# load your model(s) into vram here
 
 
 def handler(event: Any) -> str:
-    """
-    This is the handler function that will be called by the serverless.
-    """
     print(event)
-
+    time_slept = 0
+    while time_slept < sleep_time:
+        print("working, I promise")
+        time_slept += 1
+        time.sleep(1)
     # do the things
 
-    # return the output that you want to be returned like pre-signed URLs to output artifacts
     return "Hello World"
 
 
