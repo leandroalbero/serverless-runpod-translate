@@ -4,6 +4,6 @@ WORKDIR /
 
 RUN pip install -r requirements/develpment/requirements.txt
 
-add handler.py
+add handler.py .
 
 CMD ["python", "-u", "/src/handler.py"]
