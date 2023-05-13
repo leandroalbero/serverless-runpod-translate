@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 """ Contains the handler function that will be called by the serverless. """
+from typing import Any
 
-import runpod
+import runpod  # type: ignore
 
 # Load models into VRAM here so they can be warm between requests
 
 
-def handler(event):
+def handler(event: Any) -> str:
     """
     This is the handler function that will be called by the serverless.
     """
