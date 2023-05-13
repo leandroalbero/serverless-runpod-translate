@@ -1,0 +1,5 @@
+pip-tools==6.13.0
+isort
+black
+mypy
+flake8
