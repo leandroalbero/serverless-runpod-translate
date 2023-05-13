@@ -1,9 +1,14 @@
 FROM python:3.9
 
-WORKDIR /
+RUN mkdir /app
+WORKDIR /app
 
+COPY requirements/ requirements/
+
+RUN pip install --upgrade pip
 RUN pip install -r requirements/development/requirements.txt
 
-add src/handler.py .
+# Copy the src directory to the working directory
+COPY ./ ./
 
 CMD ["python", "-u", "/src/handler.py"]
