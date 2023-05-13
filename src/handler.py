@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-''' Contains the handler function that will be called by the serverless. '''
+""" Contains the handler function that will be called by the serverless. """
 
 import runpod
 
@@ -7,9 +7,9 @@ import runpod
 
 
 def handler(event):
-    '''
+    """
     This is the handler function that will be called by the serverless.
-    '''
+    """
     print(event)
 
     # do the things
