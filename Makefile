@@ -34,8 +34,27 @@ lint-ci:
 .PHONY: test-local
 test-local: export ENVIRONMENT=test
 test-local:
-	python3 -m pytest .
+	pytest .
 
+.PHONY: docker-build
+docker-build:
+	# if container is already running, stop it and remove it
+	make docker-remove || true
+	docker build -t serverless-runpod-translate .
+	docker run -d --name serverless-runpod-translate serverless-runpod-translate
+
+.PHONY: docker-stop
+docker-stop:
+	docker stop serverless-runpod-translate
+
+.PHONY: docker-remove
+docker-remove:
+	docker stop serverless-runpod-translate
+	docker rm serverless-runpod-translate
+
+.phony:test
+test:
+	docker exec serverless-runpod-translate make test-local
 
 # -- help
 

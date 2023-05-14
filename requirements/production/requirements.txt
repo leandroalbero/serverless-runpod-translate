@@ -37,6 +37,7 @@ charset-normalizer==3.1.0
 click==8.1.3
     # via
     #   nltk
+    #   sacremoses
     #   uvicorn
 dnspython==2.3.0
     # via email-validator
@@ -91,7 +92,9 @@ jmespath==1.0.1
     #   boto3
     #   botocore
 joblib==1.2.0
-    # via nltk
+    # via
+    #   nltk
+    #   sacremoses
 markupsafe==2.1.2
     # via jinja2
 mpmath==1.3.0
@@ -145,6 +148,7 @@ pyyaml==6.0
 regex==2023.5.5
     # via
     #   nltk
+    #   sacremoses
     #   transformers
 requests==2.30.0
     # via
@@ -155,10 +159,14 @@ runpod==0.9.7
     # via -r requirements.in
 s3transfer==0.6.1
     # via boto3
+sacremoses==0.0.53
+    # via -r requirements.in
 sentencepiece==0.1.99
     # via easynmt
 six==1.16.0
-    # via python-dateutil
+    # via
+    #   python-dateutil
+    #   sacremoses
 sniffio==1.3.0
     # via
     #   anyio
@@ -177,6 +185,7 @@ tqdm==4.65.0
     #   easynmt
     #   huggingface-hub
     #   nltk
+    #   sacremoses
     #   tqdm-loggable
     #   transformers
 tqdm-loggable==0.1.3
