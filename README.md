@@ -1,5 +1,4 @@
 [![Validate pull request](https://github.com/leandroalbero/serverless-runpod-translate/actions/workflows/pull-request.yaml/badge.svg)](https://github.com/leandroalbero/serverless-runpod-translate/actions/workflows/pull-request.yaml)
-[![Validate pull request](https://github.com/leandroalbero/serverless-runpod-translate/actions/workflows/pull-request.yaml/badge.svg?event=issues)](https://github.com/leandroalbero/serverless-runpod-translate/actions/workflows/pull-request.yaml)
 # serverless-runpod-translate (WIP)
 Service to be run on a serverless runpod.ai instance to translate messages from English to Spanish.
 
@@ -14,7 +13,7 @@ Service to be run on a serverless runpod.ai instance to translate messages from 
 1. Upload the container image to dockerhub (you can use the GA) and then add it as a template to your runpod.ai account.
 Alternatively, you can use my image: `leandroalbero/serverless-runpod:main`
 2. Create an API on runpod.ai serverless section, add as many servers as you need and customize the settings to your needs.
-3. Call the runsync endpoint with the following payload:
+3. Call the runsync endpoint with the following payload, don't forget to authenticate with your API key (Bearer token):
 ```json
 {
     "input":{
