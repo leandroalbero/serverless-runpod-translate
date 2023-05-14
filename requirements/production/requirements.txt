@@ -35,17 +35,30 @@ charset-normalizer==3.1.0
     #   aiohttp
     #   requests
 click==8.1.3
-    # via uvicorn
+    # via
+    #   nltk
+    #   uvicorn
 dnspython==2.3.0
     # via email-validator
+easynmt==2.0.2
+    # via -r requirements.in
 email-validator==2.0.0.post2
     # via fastapi
 fastapi[all]==0.95.1
     # via runpod
+fasttext==0.9.2
+    # via easynmt
+filelock==3.12.0
+    # via
+    #   huggingface-hub
+    #   torch
+    #   transformers
 frozenlist==1.3.3
     # via
     #   aiohttp
     #   aiosignal
+fsspec==2023.5.0
+    # via huggingface-hub
 h11==0.14.0
     # via
     #   httpcore
@@ -56,6 +69,8 @@ httptools==0.5.0
     # via uvicorn
 httpx==0.24.0
     # via fastapi
+huggingface-hub==0.14.1
+    # via transformers
 idna==3.4
     # via
     #   anyio
@@ -68,25 +83,47 @@ iniconfig==2.0.0
 itsdangerous==2.1.2
     # via fastapi
 jinja2==3.1.2
-    # via fastapi
+    # via
+    #   fastapi
+    #   torch
 jmespath==1.0.1
     # via
     #   boto3
     #   botocore
+joblib==1.2.0
+    # via nltk
 markupsafe==2.1.2
     # via jinja2
+mpmath==1.3.0
+    # via sympy
 multidict==6.0.4
     # via
     #   aiohttp
     #   yarl
+networkx==3.1
+    # via torch
+nltk==3.8.1
+    # via easynmt
+numpy==1.24.3
+    # via
+    #   easynmt
+    #   fasttext
+    #   transformers
 orjson==3.8.12
     # via fastapi
 packaging==23.1
-    # via pytest
+    # via
+    #   huggingface-hub
+    #   pytest
+    #   transformers
 pillow==9.5.0
     # via runpod
 pluggy==1.0.0
     # via pytest
+protobuf==4.23.0
+    # via easynmt
+pybind11==2.10.4
+    # via fasttext
 pydantic==1.10.7
     # via fastapi
 pytest==7.3.1
@@ -102,13 +139,24 @@ python-multipart==0.0.6
 pyyaml==6.0
     # via
     #   fastapi
+    #   huggingface-hub
+    #   transformers
     #   uvicorn
+regex==2023.5.5
+    # via
+    #   nltk
+    #   transformers
 requests==2.30.0
-    # via runpod
+    # via
+    #   huggingface-hub
+    #   runpod
+    #   transformers
 runpod==0.9.7
     # via -r requirements.in
 s3transfer==0.6.1
     # via boto3
+sentencepiece==0.1.99
+    # via easynmt
 six==1.16.0
     # via python-dateutil
 sniffio==1.3.0
@@ -118,12 +166,28 @@ sniffio==1.3.0
     #   httpx
 starlette==0.26.1
     # via fastapi
+sympy==1.12
+    # via torch
+tokenizers==0.13.3
+    # via transformers
+torch==2.0.1
+    # via easynmt
 tqdm==4.65.0
-    # via tqdm-loggable
+    # via
+    #   easynmt
+    #   huggingface-hub
+    #   nltk
+    #   tqdm-loggable
+    #   transformers
 tqdm-loggable==0.1.3
     # via runpod
+transformers==4.29.1
+    # via easynmt
 typing-extensions==4.5.0
-    # via pydantic
+    # via
+    #   huggingface-hub
+    #   pydantic
+    #   torch
 ujson==5.7.0
     # via fastapi
 urllib3==1.26.15
@@ -140,3 +204,6 @@ websockets==11.0.3
     # via uvicorn
 yarl==1.9.2
     # via aiohttp
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools
