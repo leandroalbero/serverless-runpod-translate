@@ -23,7 +23,7 @@ jobs:
           pip install --upgrade pip
           sudo apt update
           pip install pybind11
-          pip install -r requirements/development/requirements.txt
+          sudo pip install -r requirements/development/requirements.txt
 
       - name: set environment variables
         run: |
