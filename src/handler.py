@@ -9,7 +9,7 @@ model = EasyNMT("opus-mt")
 
 
 def handler(event: Any) -> str:
-    return model.translate(event["input_text"], target_lang="en")
+    return model.translate(event["input"]["input_text"], target_lang="en")
 
 
 runpod.serverless.start({"handler": handler})
