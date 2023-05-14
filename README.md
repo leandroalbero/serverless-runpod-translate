@@ -37,3 +37,5 @@ A response will be returned with the translated text to english:
 
 ## Testing results
 Using 3 nodes of the cheapest instance type (A4000/A5000, 6vCPU, 16GB RAM), the 99th percentile response time is 18ms on 100 concurrent requests.
+
+**Note**: Cold start of the container is around 15s, so the first request will take that long to complete.
