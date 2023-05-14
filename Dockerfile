@@ -8,7 +8,6 @@ COPY requirements/ requirements/
 RUN apt update
 RUN apt-get install -y python3 python3-pip
 RUN pip install --upgrade pip
-RUN pip install tensorflow-gpu
 RUN pip install -v pybind11
 RUN pip install -r requirements/development/requirements.txt
 
