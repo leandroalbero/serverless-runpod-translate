@@ -54,7 +54,7 @@ docker-remove:
 
 .phony:test
 test:
-	docker exec -it serverless-runpod-translate make test-local
+	docker exec serverless-runpod-translate make test-local
 
 # -- help
 
