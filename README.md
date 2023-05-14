@@ -17,6 +17,8 @@ Alternatively, you can use my image: `leandroalbero/serverless-runpod:main`
 ```json
 {
     "input":{
+        "src_lang":"es",    # Optional, defaults to ES
+        "target_lang":"en", # Optional, defaults to ES
         "input_text":"Hola mundo, esta es una frase en castellano"
     }
 }
