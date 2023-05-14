@@ -34,7 +34,7 @@ lint-ci:
 .PHONY: test-local
 test-local: export ENVIRONMENT=test
 test-local:
-	python3 -m pytest .
+	pytest .
 
 .PHONY: docker-build
 docker-build:
