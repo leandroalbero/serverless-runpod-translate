@@ -6,7 +6,7 @@ from easynmt import EasyNMT  # type: ignore
 model = EasyNMT("opus-mt")
 
 
-def handler(event: Any) -> dict[str, str]:
+def handler(event: Any) -> dict:
     src_lang = event["input"]["src_lang"] if "src_lang" in event["input"] else "es"
     target_lang = (
         event["input"]["target_lang"] if "target_lang" in event["input"] else "en"
