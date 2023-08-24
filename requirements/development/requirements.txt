@@ -181,8 +181,10 @@ platformdirs==3.5.1
     # via black
 pluggy==1.0.0
     # via pytest
-protobuf==4.23.0
-    # via easynmt
+protobuf==3.20.3
+    # via
+    #   -r ../production/requirements.in
+    #   easynmt
 pybind11==2.10.4
     # via fasttext
 pycodestyle==2.10.0

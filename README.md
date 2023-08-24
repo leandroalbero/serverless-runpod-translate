@@ -1,6 +1,8 @@
 [![Validate pull request](https://github.com/leandroalbero/serverless-runpod-translate/actions/workflows/pull-request.yaml/badge.svg)](https://github.com/leandroalbero/serverless-runpod-translate/actions/workflows/pull-request.yaml)
 # serverless-runpod-translate (WIP)
-Service to be run on a serverless runpod.ai instance to translate messages from English to Spanish.
+Service to be run on a serverless runpod.ai instance to translate messages from any language to Spanish.
+We are using mbart50_m2m, this is a many-to-one model. For now, only this is supported.
+Model is cached on the docker image.
 
 ## Requirements
 * A dockerhub account

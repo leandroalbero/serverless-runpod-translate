@@ -2,3 +2,4 @@ runpod
 pytest
 easynmt
 sacremoses
+protobuf==3.20.*
