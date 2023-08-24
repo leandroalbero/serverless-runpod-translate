@@ -2,10 +2,10 @@
 Fetches and caches the NMT models
 """
 
-from easynmt import EasyNMT
+from easynmt import EasyNMT  # type: ignore
 
 
-def get_models():
+def get_models() -> EasyNMT:
     model = EasyNMT("m2m_100_418m")
 
     # Translate so it downloads the models
