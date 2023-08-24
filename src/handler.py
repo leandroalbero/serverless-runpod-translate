@@ -3,7 +3,7 @@ from typing import Any
 import runpod  # type: ignore
 from easynmt import EasyNMT  # type: ignore
 
-model = EasyNMT("opus-mt")
+model = EasyNMT("mbart50_m2en")
 
 
 def handler(event: Any) -> str:
