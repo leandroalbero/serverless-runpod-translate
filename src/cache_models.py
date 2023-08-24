@@ -6,8 +6,12 @@ from easynmt import EasyNMT
 
 
 def get_models():
-    model = EasyNMT('mbart50_m2en')
-    model.translate("traduccion para que haga cache", target_lang='en')
+    model = EasyNMT('opus-mt')
+
+    # Translate so it downloads the models
+    model.translate("a", source_lang="es", target_lang='en')
+    model.translate("a", source_lang="fr", target_lang='en')
+    model.translate("a", source_lang="pt", target_lang='en')
 
     return model
 
