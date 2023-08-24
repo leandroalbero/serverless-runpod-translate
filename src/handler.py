@@ -24,6 +24,7 @@ def handler(event: Any) -> dict:
     return {
         "translated_text": translated_text,
         "translation_time": translation_time,
+        "uses_gpu": "cuda" in str(model.device),
     }
 
 
