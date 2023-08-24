@@ -6,7 +6,7 @@ from easynmt import EasyNMT
 
 
 def get_models():
-    model = EasyNMT('opus-mt')
+    model = EasyNMT('m2m_100_418m')
 
     # Translate so it downloads the models
     model.translate("a", source_lang="es", target_lang='en')
