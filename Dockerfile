@@ -13,6 +13,6 @@ RUN pip install --upgrade pip --no-cache-dir && \
 # Copy the src directory to the working directory
 COPY ./ ./
 
-RUN python /cache_models.py && rm /cache_models.py
+RUN python src/cache_models.py && rm src/cache_models.py
 
 CMD ["python", "-u", "src/handler.py"]
