@@ -1,5 +1,5 @@
-from typing import Any
 from time import time
+from typing import Any
 
 import runpod  # type: ignore
 from easynmt import EasyNMT  # type: ignore
