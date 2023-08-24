@@ -7,7 +7,7 @@ model = EasyNMT("mbart50_m2en")
 
 
 def handler(event: Any) -> str:
-    src_lang = event["input"]["src_lang"] if "src_lang" in event["input"] else "es"
+    src_lang = event["input"]["src_lang"] if "src_lang" in event["input"] else None
     target_lang = (
         event["input"]["target_lang"] if "target_lang" in event["input"] else "en"
     )
