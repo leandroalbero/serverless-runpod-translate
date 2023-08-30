@@ -20,7 +20,7 @@ Alternatively, you can use my image: `leandroalbero/serverless-runpod:main`
 ```json
 {
     "input":{
-        "src_lang":"es",    # Optional, defaults to ES
+        "src_lang":"es",    # Optional, defaults to auto-detected
         "target_lang":"en", # Optional, defaults to EN
         "input_text":"Hola mundo, esta es una frase en castellano"
     }
@@ -29,11 +29,15 @@ Alternatively, you can use my image: `leandroalbero/serverless-runpod:main`
 A response will be returned with the translated text to english:
 ```json
 {
-    "delayTime": 502,
-    "executionTime": 103,
-    "id": "sync-b69596b5-1cf2-4f65-a664-a81831ce563d",
-    "output": "Hello world, this is a phrase in Spanish",
-    "status": "COMPLETED"
+    "delayTime": 96,
+    "executionTime": 84,
+    "id": "sync-d14c2348-19b5-44dd-9657-1995146d2f49",
+    "output": {
+      "translated_text": "building 8 stories",
+      "translation_time": 0.0007581710815429688, 
+      "uses_gpu": True
+    },
+    "status": "COMPLETED",
 }
 ```
 
@@ -41,6 +45,5 @@ A response will be returned with the translated text to english:
 ... TODO
 
 ## Testing results
-Using 3 nodes of the cheapest instance type (A4000/A5000, 6vCPU, 16GB RAM), the 99th percentile response time is 18ms on 100 concurrent requests.
 
-**Note**: Cold start of the container is around 15s, so the first request will take that long to complete.
+![translation times on an RTX4000](media/translation_times.png)
