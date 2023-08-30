@@ -1,6 +1,6 @@
 [![Validate pull request](https://github.com/leandroalbero/serverless-runpod-translate/actions/workflows/pull-request.yaml/badge.svg)](https://github.com/leandroalbero/serverless-runpod-translate/actions/workflows/pull-request.yaml)
 # serverless-runpod-translate
-Service to be run on a serverless runpod.ai instance to translate messages from any language to Spanish.
+Service to be run on a serverless runpod.ai instance to translate messages from any language to any language (english by default).
 We are using `m2m_100_418m`, this is a many-to-many model. Metrics on performance are TBD.
 Model is cached on the docker image.
 
