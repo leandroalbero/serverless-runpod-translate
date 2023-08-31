@@ -52,9 +52,13 @@ docker-remove:
 	docker stop serverless-runpod-translate
 	docker rm serverless-runpod-translate
 
-.phony:test
+.PHONY: test
 test:
 	docker exec serverless-runpod-translate make test-local
+
+.PHONY: shell
+shell:
+	docker exec -it serverless-runpod-translate bash
 
 # -- help
 

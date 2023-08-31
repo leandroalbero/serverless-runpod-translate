@@ -1,4 +1,4 @@
-runpod
+runpod==1.2.0
 pytest
 easynmt
 sacremoses
