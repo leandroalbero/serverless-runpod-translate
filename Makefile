@@ -41,7 +41,11 @@ docker-build:
 	# if container is already running, stop it and remove it
 	make docker-remove || true
 	docker build -t serverless-runpod-translate .
-	docker run -d --name serverless-runpod-translate serverless-runpod-translate
+	docker run -d --name serverless-runpod-translate serverless-runpod-translate sleep infinity
+
+.PHONY: docker-start
+docker-start:
+	docker start serverless-runpod-translate
 
 .PHONY: docker-stop
 docker-stop:
@@ -52,9 +56,13 @@ docker-remove:
 	docker stop serverless-runpod-translate
 	docker rm serverless-runpod-translate
 
-.phony:test
+.PHONY: test
 test:
 	docker exec serverless-runpod-translate make test-local
+
+.PHONY: shell
+shell:
+	docker exec -it serverless-runpod-translate bash
 
 # -- help
 
