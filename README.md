@@ -14,7 +14,7 @@ Model is cached on the docker image.
 ## Usage
 Check [the wiki](https://github.com/leandroalbero/serverless-runpod-translate/wiki) for more detailed information
 1. Upload the container image to dockerhub (you can use the GA) and then add it as a template to your runpod.ai account.
-Alternatively, you can use my image: `leandroalbero/serverless-runpod:main`
+Alternatively, you can use my image: `leandroalbero/serverless-runpod:latest`
 2. Create an API on runpod.ai serverless section, add as many servers as you need and customize the settings to your needs.
 3. Call the runsync endpoint with the following payload, don't forget to authenticate with your API key (Bearer token):
 ```json
